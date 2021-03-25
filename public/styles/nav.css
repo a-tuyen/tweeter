@@ -1,0 +1,44 @@
+nav {
+  border: 1px dashed red;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+span {
+  border: 1px dashed darkgrey;
+  width: 100%;
+  display: flex;
+
+}
+
+.logo {
+  font-size: 175%;
+  font-family: "Bungee";
+  /* border: 1px dashed darkgrey; */
+  /* flex-grow: 10 */
+  align-items: baseline;
+  flex-basis: 80%;
+  
+}
+
+#write1 {
+  /* border: 1px dashed darkgrey; */
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  flex-basis: 4.5%;
+  align-items: flex-start;
+}
+
+.write2 {
+  /* border: 1px dashed darkgrey; */
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  flex-basis: 10.5%;
+  align-items: flex-start;
+}
