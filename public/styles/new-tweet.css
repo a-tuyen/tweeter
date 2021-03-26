@@ -33,6 +33,7 @@ button {
   color: white;
 }
 
-output {
-  color: black;
+
+.red-font {
+  color: red;
 }
