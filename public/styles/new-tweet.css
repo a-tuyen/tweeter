@@ -1,0 +1,38 @@
+
+.new-tweet {
+  /* border: 2px solid darkgrey; */
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+}
+
+/* form {
+  border: 2px solid darkblue;
+} */
+
+textarea {
+  background: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid black;
+  width: 100%;
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+}
+
+form > div {
+  /* border: 2px solid darkred; */
+  font-family: "Bungee";
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #4056A1;
+  color: white;
+}
+
+output {
+  color: black;
+}
