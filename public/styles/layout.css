@@ -19,10 +19,42 @@ nav {
 }
 
 body {
+  /* border: 2px solid rgb(116, 0, 139); */
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.container {
+  /* border: 2px solid darkgrey; */
+  width: 90%;
+  background-color: #f4f1ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.container > h2 {
+  /* border: 2px solid darkred; */
+  /* /* display: flex; */
+  /* align-self: center; */
+  /* flex-basis: 50; */
+  /* justify-content: center; */
+  /* justify-content: center; */
+}
+
+p {
+  /* border: 2px solid darkgreen; */
+  /* display: flex; */
+  /* align-self: center; */
+  /* flex-basis: 50; */
+  /* justify-content: center; */
 }
 
 /*
