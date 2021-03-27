@@ -1,0 +1,51 @@
+article.tweet {
+  border: solid 3px black;
+  padding: .5em;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+
+}
+
+article > header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header > img {
+  padding-right: .5em;
+
+}
+
+.handle {
+  /* border: solid 2px green; */
+  opacity: 0;
+  display: flex;
+  flex-basis: 65%;
+  justify-content: flex-end;
+}
+
+
+footer {
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  border-top: solid black;
+  font-size: medium;
+  padding: .75em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article:hover {
+  border: solid 3px black;
+  box-shadow: 5px 10px lightslategray;
+  /* transition: box-shadow 0.3s ease-in-out; */
+}
+
+
+article:hover .handle {
+  opacity: 1;
+}

@@ -24,6 +24,7 @@ textarea {
 form > div {
   /* border: 2px solid darkred; */
   font-family: "Bungee";
+  padding: 0.5em;
   display: flex;
   justify-content: space-between;
 }
@@ -32,7 +33,6 @@ button {
   background-color: #4056A1;
   color: white;
 }
-
 
 .red-font {
   color: red;

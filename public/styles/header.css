@@ -1,28 +1,25 @@
-header {
+body > header {
   /* border: 2px solid darkred; */
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   height: 400px;
   width: 100%;
-  padding: 0.5em;
+  /* padding: 0.5em; */
   display: flex;
-  align-content: center;
-  /* justify-content: center; */
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
-header div {
-  /* border: 2px solid darkred; */
+/* header div {
+  border: 2px solid darkred;
   display: flex;
   justify-content: center;
-  /* align-content: flex-start; */
+  align-content: flex-start;
 }
 
 h2 {
-  /* border: 2px solid darkred; */
+  border: 2px solid darkred;
   display: flex;
   justify-content: center;
-
-
-
-}
+} */
