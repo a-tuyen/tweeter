@@ -4,7 +4,6 @@ body > header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   height: 400px;
   width: 100%;
-  /* padding: 0.5em; */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -41,7 +41,8 @@ footer {
 
 article:hover {
   border: solid 3px black;
-  box-shadow: 5px 10px lightslategray;
+  box-shadow: 5px 10px #4056A1;
+  ;
   /* transition: box-shadow 0.3s ease-in-out; */
 }
 

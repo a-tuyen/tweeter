@@ -20,6 +20,7 @@ nav {
 
 body {
   /* border: 2px solid rgb(116, 0, 139); */
+  margin-top: 110px;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -31,7 +32,7 @@ body {
 
 }
 
-main.container{
+main.container {
   /* border: 2px solid darkgrey; */
   width: 90%;
   background-color: #f4f1ec;
