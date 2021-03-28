@@ -23,28 +23,41 @@ $(document).ready(function() {
 
   //posts tweet to page w/o reloading page & clears text field once loaded
   const $postTweet = $('form.new-tweet');
+  const $textarea = $('textarea');
   $postTweet.on("submit", function (event) {
     event.preventDefault();
+    if ($textarea.val().length === 0) {
+      alert('Please fill in the textbox');
+      return;
+    } else if ($textarea.val().length > 140) {
+      alert('Sorry your thoughts are too long! Please shorten them and re-submit');
+      return;
+    }
     const serializedTweet = $(this).serialize();
     $.post('/tweets', serializedTweet)  //$.post is shortened form of jquery ajax post request
     .then((response) => {
-      getTweets();
+      loadTweets();
       $('textarea').val(''); //clears tweet text field once tweet is posted
     })
   });
-  
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
 
 const createTweetElement = (tweetData) => {
   const $tweet = `
   <article class="tweet">
   <header>
-    <img src="https://i.imgur.com/nlhLi3I.png">
-    <div class="name">Rhoda Jacobs</div>
-    <div class="handle" class='hover'>@MsJacobs</div>
+    <img src=${escape(tweetData.user.avatar)}>
+    <div class="username">${escape(tweetData.user.name)}</div>
+    <div class="user-handle">${escape(tweetData.user.handle)}</div>
   </header> 
-  <p>${tweetData.content.text}</p>
+  <p class="tweet-message">${escape(tweetData.content.text)}</p>
   <footer>
-    <div class=days-ago>10 days ago</div>
+    <div class=days-ago>${escape(tweetData.created_at)}</div>
     <div class=icons>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -58,7 +71,7 @@ const createTweetElement = (tweetData) => {
 
 const renderTweets = (tweets) => {
   const $tweetsContainer = $('#tweets-container');
-  $tweetsContainer.empty();
+  $tweetsContainer.empty();  //empties tweets already posted so they won't get posted again
   for (let tweet of tweets) {
     let $tweetHTML = createTweetElement(tweet);
     $('#tweets-container').append($tweetHTML);
@@ -66,3 +79,6 @@ const renderTweets = (tweets) => {
 }
 
 })
+
+
+// <script>alert('uh oh!'):</script>
