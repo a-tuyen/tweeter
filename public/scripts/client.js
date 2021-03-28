@@ -7,7 +7,9 @@
 // Fake data taken from initial-tweets.json
 $(document).ready(function() {
 
+
   const loadTweets = () => {
+    console.log('loadTweets ran')
     $.ajax({
       url: "/tweets/",
       method: 'GET',
@@ -20,6 +22,8 @@ $(document).ready(function() {
       }
     });
   };
+
+  loadTweets()
 
   //posts tweet to page w/o reloading page & clears text field once loaded
   const $postTweet = $('form.new-tweet');
@@ -38,6 +42,7 @@ $(document).ready(function() {
     .then((response) => {
       loadTweets();
       $('textarea').val(''); //clears tweet text field once tweet is posted
+      $('output').val(140);
     })
   });
 
@@ -47,17 +52,20 @@ $(document).ready(function() {
     return div.innerHTML;
   }
 
+  // const timeSince = 	Math.floor(new Date(tweet.created_at).getTime()/1000.0) 
+  // ${moment(tweet.created_at).fromNow()}
+
 const createTweetElement = (tweetData) => {
   const $tweet = `
   <article class="tweet">
   <header>
-    <img src=${escape(tweetData.user.avatar)}>
+    <img src="${escape(tweetData.user.avatars)}">
     <div class="username">${escape(tweetData.user.name)}</div>
     <div class="user-handle">${escape(tweetData.user.handle)}</div>
   </header> 
   <p class="tweet-message">${escape(tweetData.content.text)}</p>
   <footer>
-    <div class=days-ago>${escape(tweetData.created_at)}</div>
+    <div class=days-ago>${moment(tweetData.created_at).fromNow()}</div>
     <div class=icons>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -70,11 +78,13 @@ const createTweetElement = (tweetData) => {
 
 
 const renderTweets = (tweets) => {
+  console.log('render tweets')
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty();  //empties tweets already posted so they won't get posted again
   for (let tweet of tweets) {
     let $tweetHTML = createTweetElement(tweet);
-    $('#tweets-container').append($tweetHTML);
+    $('#tweets-container').prepend($tweetHTML);
+    
   }
 }
 

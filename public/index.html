@@ -21,12 +21,16 @@
     <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
 
     <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/client.js"></script>
+
   </head>
 
   <body>
@@ -51,6 +55,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="error">Too many characters! Please shorten and re-submit</section>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action='/tweets/' method="POST" class="new-tweet">
