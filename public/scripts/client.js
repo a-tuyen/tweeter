@@ -6,30 +6,33 @@
 
 // Fake data taken from initial-tweets.json
 $(document).ready(function() {
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+
+  const loadTweets = () => {
+    $.ajax({
+      url: "/tweets/",
+      method: 'GET',
+      dataType: 'json',
+      success: (tweets) => {
+        renderTweets(tweets)
+      },
+      error: (error) => {
+        console.error(error);
+      }
+    });
+  };
+
+  //posts tweet to page w/o reloading page & clears text field once loaded
+  const $postTweet = $('form.new-tweet');
+  $postTweet.on("submit", function (event) {
+    event.preventDefault();
+    const serializedTweet = $(this).serialize();
+    $.post('/tweets', serializedTweet)  //$.post is shortened form of jquery ajax post request
+    .then((response) => {
+      getTweets();
+      $('textarea').val(''); //clears tweet text field once tweet is posted
+    })
+  });
+  
 
 const createTweetElement = (tweetData) => {
   const $tweet = `
@@ -53,14 +56,13 @@ const createTweetElement = (tweetData) => {
 }
 
 
-const renderTweets = (arrTweetObj) => {
-  for (let tweetObj of arrTweetObj) {
-    let $tweetHTML = createTweetElement(tweetObj);
+const renderTweets = (tweets) => {
+  const $tweetsContainer = $('#tweets-container');
+  $tweetsContainer.empty();
+  for (let tweet of tweets) {
+    let $tweetHTML = createTweetElement(tweet);
     $('#tweets-container').append($tweetHTML);
   }
 }
 
-
-
-renderTweets(data);
 })
