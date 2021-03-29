@@ -6,7 +6,7 @@
 
 // Fake data taken from initial-tweets.json
 $(document).ready(function() {
-  $(this).scrollTop(0); //loads page at the top and when refreshing
+  $(this).scrollTop(0); // makes page loads at the top
 
   const loadTweets = () => {
     $.ajax({
@@ -23,6 +23,10 @@ $(document).ready(function() {
 
   loadTweets(); //loads initial tweets in history
 
+  //reveals tweet form when clicked
+  $("#form-toggle-button").click(function() {
+    $(".new-tweet").toggle();
+  });
   
   //posts tweet to page w/o reloading page & clears text field once loaded
   const $postTweet = $('form.new-tweet');
