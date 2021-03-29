@@ -1,7 +1,6 @@
 body > header {
-  /* border: 2px solid darkred; */
-  background-color: orange;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  background-color:#00bd7e;
+  background-image: url("https://www.transparenttextures.com/patterns/xv.png");
   height: 400px;
   width: 100%;
   display: flex;
@@ -20,7 +19,5 @@ body > header {
     align-items: center;
     justify-content: center;
     flex-basis: 50;
-
-    
   }
 }

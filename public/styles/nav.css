@@ -1,4 +1,3 @@
-/* need to add padding on either side */
 
 nav {
   height: 120px;
@@ -14,7 +13,6 @@ nav {
 }
 
 span {
-  /* border: 1px dashed red; */
   font-family: "Source Sans Pro";
   font-weight: 300;
   color: white;
@@ -25,14 +23,11 @@ span {
 
 }
 
-a.compose-tweet-link {
+#form-toggle-button {
+  border: 2px solid white;
+  background: #4056A1;
   padding: 0.5rem;
   text-decoration: none;
-}
-
-span > a.compose-tweet-link:hover {
-  border-bottom: solid 2px cadetblue;
-  border-top: solid 2px cadetblue;
 }
 
 span > .logo {
@@ -51,12 +46,14 @@ span .write1 {
   align-items: flex-start;
 }
 
-
+/* tablet or smaller mode */
 @media only screen and (max-width: 768px) {
   nav {
-    background-color: orange;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-color: #00bd7e;
+    background-image: url("https://www.transparenttextures.com/patterns/xv.png");
     padding: 2vw;
   }
-  
+  #form-toggle-button {
+    background: #00bd7e;
+  }
 }

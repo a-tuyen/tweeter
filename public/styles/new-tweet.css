@@ -1,16 +1,13 @@
 
 .new-tweet {
-  /* border: 2px solid darkgrey; */
+
   display: flex;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* padding: 1rem; */
   flex-direction: column;
-  /* align-content: center; */
 }
 
 section > h2 {
-  /* border: 2px solid darkgrey; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +15,6 @@ section > h2 {
 
 textarea {
   background: transparent;
-  padding-top: 120px;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -31,7 +27,6 @@ textarea {
 }
 
 form > div {
-  /* border: 2px solid darkred; */
   font-family: "Bungee";
   padding: 0.5rem;
   display: flex;
@@ -69,10 +64,3 @@ div > button {
   color: red;
 }
 
-
-@media only screen and (min-width: 1024px) {
-  textarea {
-
-    
-  }
-}

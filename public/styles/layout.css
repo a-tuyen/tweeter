@@ -19,7 +19,6 @@ nav {
 }
 
 body {
-  /* border: 2px solid rgb(116, 0, 139); */
   margin-top: 120px;
   color: #545149;
   background-color: #f4f1ec;
@@ -44,7 +43,7 @@ main.container {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
+/* desktop mode */
  @media only screen and (min-width: 1024px) {
   body {
     display: flex;
@@ -52,7 +51,6 @@ main.container {
     align-items: flex-start;
     justify-content: space-evenly;
     margin-bottom: 80;
-    /* padding-left: 5rem; */
   }
   
   main.container {
@@ -63,7 +61,7 @@ main.container {
     justify-content: center;
     align-content: center;
   }
-
+  /* hides compose header when in desktop size */
   section > h2 {
     opacity: 0;
   }

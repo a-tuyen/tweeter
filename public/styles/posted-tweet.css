@@ -1,14 +1,11 @@
 article.tweet {
   border: solid 3px black;
-  padding: .5rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-}
-
-tweets-containter {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 article > header {
@@ -18,12 +15,11 @@ article > header {
 }
 
 header > img {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 
 }
 
 .user-handle {
-  /* border: solid 2px green; */
   opacity: 0;
   display: flex;
   flex-basis: 70%;
@@ -38,7 +34,7 @@ footer {
   border-left: none;
   border-top: solid black;
   font-size: medium;
-  padding: .75rem;
+  padding: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,23 +44,23 @@ div.icons {
   opacity: 0;
 }
 
+/* hover animation for the retweet, like, flag icons */
 article:hover .icons{
   opacity: 1;
 }
 
+/* hover animation for the shadowbox*/
 article:hover {
   border: solid 3px black;
   box-shadow: 5px 10px #4056A1;
-  ;
-  /* transition: box-shadow 0.3s ease-in-out; */
 }
 
-
+/* hover animation for the @username */
 article:hover .user-handle {
   opacity: 1;
 }
 
-
+/* desktop mode */
 @media only screen and (min-width: 1024px) {
   .username {
     flex-basis: 50%;
