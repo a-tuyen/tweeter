@@ -7,7 +7,7 @@ nav {
   top: 0;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 1.5em;
+  padding: 1.5rem;
   display: flex;
 
 
@@ -21,26 +21,42 @@ span {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
+}
+
+a.compose-tweet-link {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+span > a.compose-tweet-link:hover {
+  border-bottom: solid 2px cadetblue;
+  border-top: solid 2px cadetblue;
 }
 
 span > .logo {
-  /* border: 1px solid yellow; */
   font-size: 175%;
   font-family: "Bungee";
-  /* border: 1px dashed darkgrey; */
-  /* flex-grow: 10 */
   flex-basis: 50%;
-  /* justify-content: flex-start; */
+  
 }
 
-
 span .write1 {
-  padding-left: 0.5em;
-  padding-right: 0.15em;
+  padding-left: 0.5rem;
+  padding-right: 0.15rem;
   font-family: "Source Sans Pro";
   font-weight: 700;
   flex-basis: 4.5%;
   align-items: flex-start;
 }
 
+
+@media only screen and (max-width: 768px) {
+  nav {
+    background-color: orange;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    padding: 2vw;
+  }
+  
+}

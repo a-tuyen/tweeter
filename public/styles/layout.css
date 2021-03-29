@@ -28,10 +28,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
-
-
-
 }
 
 main.container {
@@ -43,8 +39,33 @@ main.container {
   align-content: center;
 }
 
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-bottom: 80;
+    /* padding-left: 5rem; */
+  }
+  
+  main.container {
+    width: 55%;
+    background-color: #f4f1ec;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  section > h2 {
+    opacity: 0;
+  }
+}
 

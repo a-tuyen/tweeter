@@ -2,9 +2,9 @@
 .new-tweet {
   /* border: 2px solid darkgrey; */
   display: flex;
-  padding-left: 1em;
-  padding-right: 1em;
-  /* padding: 1em; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* padding: 1rem; */
   flex-direction: column;
   /* align-content: center; */
 }
@@ -33,7 +33,7 @@ textarea {
 form > div {
   /* border: 2px solid darkred; */
   font-family: "Bungee";
-  padding: 0.5em;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -69,3 +69,10 @@ div > button {
   color: red;
 }
 
+
+@media only screen and (min-width: 1024px) {
+  textarea {
+
+    
+  }
+}
