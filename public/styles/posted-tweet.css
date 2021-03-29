@@ -1,10 +1,14 @@
 article.tweet {
   border: solid 3px black;
   padding: .5em;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-  transition: 1s;
+}
 
+tweets-containter {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 article > header {
@@ -37,6 +41,14 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+div.icons {
+  opacity: 0;
+}
+
+article:hover .icons{
+  opacity: 1;
 }
 
 article:hover {

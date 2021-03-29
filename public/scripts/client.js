@@ -6,7 +6,7 @@
 
 // Fake data taken from initial-tweets.json
 $(document).ready(function() {
-
+  $(this).scrollTop(0);
 
   const loadTweets = () => {
     $.ajax({
@@ -23,6 +23,7 @@ $(document).ready(function() {
 
   loadTweets()
 
+  
   //posts tweet to page w/o reloading page & clears text field once loaded
   const $postTweet = $('form.new-tweet');
   const $textarea = $('textarea');
@@ -60,7 +61,7 @@ const createTweetElement = (tweetData) => {
   </header> 
   <p class="tweet-message">${escape(tweetData.content.text)}</p>
   <footer>
-    <div class=days-ago>${moment(tweetData.created_at).fromNow()}</div>
+    <div class="days-ago">${moment(tweetData.created_at).fromNow()}</div>
     <div class=icons>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -78,8 +79,6 @@ const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     let $tweetHTML = createTweetElement(tweet);
     $('#tweets-container').prepend($tweetHTML);
-    
   }
 }
-
 })

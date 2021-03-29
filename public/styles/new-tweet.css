@@ -2,8 +2,40 @@
 .new-tweet {
   /* border: 2px solid darkgrey; */
   display: flex;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  /* padding: 1em; */
   flex-direction: column;
+  /* align-content: center; */
+}
+
+section > h2 {
+  /* border: 2px solid darkgrey; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  background: transparent;
+  padding-top: 120px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid black;
+  width: 100%;
+  font-family: "Source Sans Pro";
+  font-weight: 700;
+  outline:none;
+  
+}
+
+form > div {
+  /* border: 2px solid darkred; */
+  font-family: "Bungee";
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .error-msgs {
@@ -28,31 +60,7 @@
 
 }
 
-
-/* form {
-  border: 2px solid darkblue;
-} */
-
-textarea {
-  background: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: solid black;
-  width: 100%;
-  font-family: "Source Sans Pro";
-  font-weight: 700;
-}
-
-form > div {
-  /* border: 2px solid darkred; */
-  font-family: "Bungee";
-  padding: 0.5em;
-  display: flex;
-  justify-content: space-between;
-}
-
-button {
+div > button {
   background-color: #4056A1;
   color: white;
 }
