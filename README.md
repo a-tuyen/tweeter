@@ -6,11 +6,11 @@ Tweeter showcases HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, and
 
 ##Screenshots
 
-!["Screenshot of tweet compose box with error in mobile mode"] (https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Mobile-Mode.png?raw=true)
+!["Screenshot of tweet compose box with error in mobile mode"](https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Mobile-Mode.png?raw=true)
 
-!["Screenshot of tweet timeline in tablet mode"] (https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Tablet-Mode-Timeline.png?raw=true)
+!["Screenshot of tweet timeline in tablet mode"](https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Tablet-Mode-Timeline.png?raw=true)
 
-!["Screenshot of main page in desktop mode"] (https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Desktop-Mode.png?raw=true)
+!["Screenshot of main page in desktop mode"](https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Desktop-Mode.png?raw=true)
 
 
 ## Getting Started
