@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone. Straightforward, quick and easy to use, Tweeter gives you a place to store all your precious thoughts, tweets and hums! Tweeter features a responsive UI, suitable for desktop, table or mobile devices. Take Tweeter with you wherever you go!
+Tweeter is a simple, single-page Twitter clone. Straightforward, quick and easy to use, Tweeter gives you a place to store all your precious thoughts, tweets and hums in 140 characters or less! Keep your messages sweet and simple with the help of Tweeter's character counter which alerts you if you've gone over the limit and sends an error message if you try and ignore it. The handy date stamp logs when each tweet was posted and all recent posts are kept at the top for convenience. Tweeter features a responsive UI, suitable for desktop, table or mobile devices. Take Tweeter with you wherever you go!
 
 Tweeter showcases HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, and Express back-end skills.
 
