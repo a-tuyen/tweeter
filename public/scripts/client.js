@@ -9,7 +9,6 @@ $(document).ready(function() {
 
 
   const loadTweets = () => {
-    console.log('loadTweets ran')
     $.ajax({
       url: "/tweets/",
       method: 'GET',
@@ -18,7 +17,6 @@ $(document).ready(function() {
         renderTweets(tweets)
       },
       error: (error) => {
-        console.error(error);
       }
     });
   };
@@ -31,10 +29,10 @@ $(document).ready(function() {
   $postTweet.on("submit", function (event) {
     event.preventDefault();
     if ($textarea.val().length === 0) {
-      alert('Please fill in the textbox');
+      $('.error-empty').slideDown(600).delay(1500).slideUp(600);
       return;
     } else if ($textarea.val().length > 140) {
-      alert('Sorry your thoughts are too long! Please shorten them and re-submit');
+      $('.error-long').slideDown(600).delay(1500).slideUp(600);
       return;
     }
     const serializedTweet = $(this).serialize();
@@ -51,9 +49,6 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
-
-  // const timeSince = 	Math.floor(new Date(tweet.created_at).getTime()/1000.0) 
-  // ${moment(tweet.created_at).fromNow()}
 
 const createTweetElement = (tweetData) => {
   const $tweet = `
@@ -78,7 +73,6 @@ const createTweetElement = (tweetData) => {
 
 
 const renderTweets = (tweets) => {
-  console.log('render tweets')
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty();  //empties tweets already posted so they won't get posted again
   for (let tweet of tweets) {
@@ -89,6 +83,3 @@ const renderTweets = (tweets) => {
 }
 
 })
-
-
-// <script>alert('uh oh!'):</script>

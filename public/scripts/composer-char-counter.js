@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(event) {
-  $('#tweet-text').on('keyup', function() {
+  $('#tweet-text').on('input', function() {
     let charLeft = 140;
     let textLength = $(this).val().length; //length of input in textbox
     charLeft -= textLength;

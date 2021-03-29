@@ -55,7 +55,10 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="error">Too many characters! Please shorten and re-submit</section>
+      <section class="error-msgs">
+        <div class="error-long">⚠︎ Your thoughts are too long! Please reduce to 140 characters or less ⚠︎</div>
+        <div class="error-empty">⚠︎ Empty Textbox! Please fill it with your thoughts ⚠︎</div>
+      </section>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action='/tweets/' method="POST" class="new-tweet">
