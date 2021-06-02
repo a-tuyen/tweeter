@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone. Straightforward, quick and easy 
 
 Tweeter showcases HTML, CSS, JS, jQuery and AJAX front-end skills, and Node, and Express back-end skills.
 
-##Screenshots
+## Screenshots
 
 !["Screenshot of tweet compose box with error in mobile mode"](https://github.com/a-tuyen/tweeter/blob/master/docs/Tweeter-Mobile-Mode.png?raw=true)
 
