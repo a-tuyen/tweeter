@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   //reveals tweet form when clicked
   $("#form-toggle-button").click(function() {
-    $(".new-tweet").toggle();
+    $(".new-tweet").toggle(700);
   });
   
   //posts tweet to page w/o reloading page & clears text field once loaded
